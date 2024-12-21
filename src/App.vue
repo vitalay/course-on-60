@@ -1,8 +1,9 @@
 <script>
 export default {
+  name: 'App',
    data() {
     return {
-      dey: 'пт'
+      age: 26,
      }
    },
    methods: {
@@ -18,19 +19,19 @@ export default {
 
 <template>
   <div>
-<p v-if="dey === 'пн'">пн</p>
-<p v-else-if="dey === 'вт'">вт</p>
-<p v-else-if="dey === 'ср'">ср</p>
-<p v-else-if="dey === 'чт'">чт</p>
-<p v-else-if="dey === 'пт'">пт</p>
-<p v-else-if="dey === 'сб'">сб</p>
-<p v-else>вс</p>
+    <p v-if="age < 18">подросток</p>
+	<p v-else-if="age >= 18 && age <= 25">взрослый</p>
+  <p v-else>старик</p>
   </div>
 </template>
 
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0; 
 
+}
 </style>
 
 
