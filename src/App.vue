@@ -20,11 +20,11 @@ export default {
 <template>
   <div>
     <button @click="isAuth = !isAuth">Скрыть</button>
-    <template v-if="isAuth">
+    <div v-show="isAuth">
 		<p>one</p>
 		<p>two</p>
 		<p>three</p>
-	</template>
+	</div>
   </div>
 </template>
 
