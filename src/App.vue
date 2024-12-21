@@ -3,7 +3,7 @@ export default {
   name: 'App',
    data() {
     return {
-      isAuth: true
+      arr: ['x', 'y', 'z'],
      }
    },
    methods: {
@@ -18,23 +18,17 @@ export default {
 </script>
 
 <template>
-  <div>
-    <button @click="isAuth = !isAuth">Скрыть</button>
-    <div v-show="isAuth">
-		<p>one</p>
-		<p>two</p>
-		<p>three</p>
-	</div>
-  </div>
+  <ul>
+    <li v-for="(elem, key) in arr">{{ key}}</li>
+  </ul>
+	
+
+  
 </template>
 
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0; 
 
-}
 </style>
 
 
