@@ -2,21 +2,18 @@
 export default {
    data() {
      return {
-      cost: 15,
-      amount: 10
+      count: 1,
      }
    },
    methods: {
    
 
 
+
    },
    computed: {
     
-     price: function(){
-      return this.cost * this.amount + '$'
-     },
-   
+  
 
    }
 
@@ -25,10 +22,12 @@ export default {
 
 <template>
   <div>
-   
+  <a @click.prevent href="https://code.mu/">code.mu</a>
+<button @click.once="count++">{{ count }}</button>
+
     
-<p>{{ price }}</p>
-<button @click="cost++">сумма</button>
+
+
   </div>
 </template>
 
