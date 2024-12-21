@@ -3,11 +3,9 @@ export default {
   name: 'App',
    data() {
     return {
-      obj: {
-	user1: '100$',
-	user2: '200$',
-	user3: '300$',
-}
+     
+        items: [1, 2, 3],
+
      }
    },
 
@@ -15,13 +13,12 @@ export default {
 </script>
 
 <template>
-
-  <ul>
-    <li v-for="(elem, key, index) in obj" >{{ key }} - {{ elem }} - {{ index + 1 }}</li>
-  </ul>
-
-
+<ul >
   
+  <li v-for="item in items">{{ item }}</li>
+
+  <li class="divider"></li>
+</ul>
 </template>
 
 
