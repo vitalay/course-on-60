@@ -11,7 +11,7 @@ export default {
    data() {
      return {
       text: 'page',
-      href: 'pages.html',
+      href: 'page.html',
      }
    }
 }
