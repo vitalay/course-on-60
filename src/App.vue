@@ -3,25 +3,23 @@ export default {
   name: 'App',
    data() {
     return {
-      arr: ['x', 'y', 'z'],
+      obj: {
+	user1: '100$',
+	user2: '200$',
+	user3: '300$',
+}
      }
    },
-   methods: {
-
-       
-   },
-   computed: {
-    
-   }
 
 };
 </script>
 
 <template>
+
   <ul>
-    <li v-for="(elem, key) in arr">{{ key}}</li>
+    <li v-for="(elem, key, index) in obj" >{{ key }} - {{ elem }} - {{ index + 1 }}</li>
   </ul>
-	
+
 
   
 </template>
