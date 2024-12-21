@@ -3,7 +3,7 @@ export default {
   name: 'App',
    data() {
     return {
-      age: 26,
+      isAuth: true
      }
    },
    methods: {
@@ -19,9 +19,12 @@ export default {
 
 <template>
   <div>
-    <p v-if="age < 18">подросток</p>
-	<p v-else-if="age >= 18 && age <= 25">взрослый</p>
-  <p v-else>старик</p>
+    <button @click="isAuth = !isAuth">Скрыть</button>
+    <template v-if="isAuth">
+		<p>one</p>
+		<p>two</p>
+		<p>three</p>
+	</template>
   </div>
 </template>
 
