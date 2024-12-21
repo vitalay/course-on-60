@@ -1,20 +1,16 @@
 <script>
 export default {
    data() {
-     return {
-      count: 1,
+    return {
+      visible: true,
+   
      }
    },
    methods: {
-   
-
-
-
+       
    },
    computed: {
     
-  
-
    }
 
 };
@@ -22,11 +18,9 @@ export default {
 
 <template>
   <div>
-  <a @click.prevent href="https://code.mu/">code.mu</a>
-<button @click.once="count++">{{ count }}</button>
-
-    
-
+    <button @click="visible = true" v-if="!visible">показать</button>
+    <button @click="visible = false" v-if="visible">скрыть</button>
+<p v-if="visible">Hello World</p>
 
   </div>
 </template>
