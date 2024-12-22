@@ -25,14 +25,11 @@ export default {
 
 <template>
 
-
-	<template v-for="product in products" :key="product.id">
-		<ul>
+<ul>
+	<li v-for="product in products" :key="product.id">
 			{{ product.name }}
-		</ul>
-	
-	</template>
-
+	</li>
+</ul>
 
 
 </template>
