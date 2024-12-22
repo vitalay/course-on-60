@@ -3,10 +3,7 @@ export default {
 
 	data() {
 		return {
-		obj: {
-				active: true,
-				valid: false
-		}
+		
 		}
 	},
 
