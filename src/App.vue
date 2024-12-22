@@ -3,24 +3,8 @@ export default {
   name: 'App',
    data() {
     return {
-     
-      products: [
-			{
-				name: 'product1',
-				price: 100,
-				quantity: 5
-			},
-			{
-				name: 'product2',
-				price: 200,
-				quantity: 4
-			},
-			{
-				name: 'product3',
-				price: 300,
-				quantity: 3
-			},
-		]
+			// items: [1, -2, 3, -4, 5],  
+   arr: [1,2,3,4,5,6,7,8,9],
 
 
      }
@@ -31,19 +15,14 @@ export default {
 
 <template>
 
+<ul>
+	<template v-for="elem in arr">
+		<li v-if="elem % 2 == 0">
+			{{ elem }}
+		</li>
+	</template>
+</ul>
 
-<table>
-  <tr v-for="product in products">
-    <td>{{ product.name }}</td>
-    <td>{{ product.price }}</td>
-    <td>{{ product.quantity }}</td>
-  </tr>
-</table>
-
-
-<p v-for="num in 30">
-		{{ num }}
-	</p>
 
 </template>
 
