@@ -3,57 +3,30 @@ export default {
 
 	data() {
 		return {
-			arr: ['a', 'b', 'v', 'q', 'c'],
-
+		obj: {
+				hidden: true,
+		}
 		}
 	},
 	methods: {
-		add() {
-			this.arr.pop()
-
-		},
-		add2() {
-			this.arr.push('d')
-		},
-		del() {
-			this.arr.splice(-2, 1)
-		},
-		del2() {
-			this.arr.sort()
-		},
-		add3() {
-			this.arr.reverse()
+		show () {
+			this.obj.hidden = !this.obj.hidden
 		}
-
 	}
-
 };
 </script>
 
 <template>
-	<ul>
-		<li v-for="elem in arr">
-			{{ elem }}
-		</li>
-	</ul>
-
-	<button @click="add">Удалить</button>
-	<button @click="add2">Добавить</button>
-	<button @click="del">Удалить предпоследний</button>
-	<button @click="del2">Сортировать</button>
-	<button @click="add3">Перевернуть</button>
-
-
+	<p :class="obj">text</p>
+	<button @click="show">done</button>
 
 </template>
 
 
 <style scoped>
-table {
-	border: 1px solid black;
+
+p.hidden {
+	display: none;
 }
 
-td {
-	border: 1px solid black;
-}
 </style>
