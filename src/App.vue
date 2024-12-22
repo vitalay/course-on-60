@@ -4,29 +4,27 @@ export default {
 	data() {
 		return {
 		obj: {
-				hidden: true,
+				active: true,
+				valid: false
 		}
 		}
 	},
+
 	methods: {
-		show () {
-			this.obj.hidden = !this.obj.hidden
-		}
+
 	}
-};
+}
 </script>
 
 <template>
-	<p :class="obj">text</p>
-	<button @click="show">{{obj.hidden ? 'show' : 'hide'}}</button>
-
+	<p :class="{active: true, valid: false}">text</p>
 </template>
 
 
 <style scoped>
 
-p.hidden {
-	display: none;
+* {
+	text-align: center;
 }
 
 </style>
