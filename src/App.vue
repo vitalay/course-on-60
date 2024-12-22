@@ -18,7 +18,7 @@ export default {
 
 <template>
 	<p :class="obj">text</p>
-	<button @click="show">done</button>
+	<button @click="show">{{obj.hidden ? 'show' : 'hide'}}</button>
 
 </template>
 
