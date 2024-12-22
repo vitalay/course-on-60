@@ -3,27 +3,19 @@ export default {
 
 	data() {
 		return {
-			text: '',
-			arr: [],
-		
+		checked: false
 		}
 	},
 
 	methods: {
-		split() {
-			this.arr = this.text.split(' ');
-		}
+	
 	}
 }
 </script>
 
 <template>
-	<textarea v-model="text"></textarea>
-	<button @click="split">Clear</button>
-	<ul>
-		<li v-for="word in arr">{{ word }}</li>
-	</ul>
-	
+	<input type="checkbox" v-model="checked">
+<p v-if="checked" >{{ checked ? 'yes' : 'no' }}</p>
 </template>
 
 
