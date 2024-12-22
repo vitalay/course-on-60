@@ -3,7 +3,8 @@ export default {
 
 	data() {
 		return {
-		arr: [],
+			choice: '',
+
 		}
 	},
 
@@ -14,19 +15,21 @@ export default {
 </script>
 
 <template>
-<p> Какой язык программирования вы выбираете  </p>
-	<input type="checkbox" v-model="arr" value="JavaScrypt" id="checkbox">
-	<label for="checkbox">JavaScrypt</label>
+	<p> Какой язык для вас родной</p>
+	<input name="radio" type="radio" v-model="choice" value="на улице идет дождь">
+	<label for="Русский">Русский</label>
 	<br>
-	<input type="checkbox" v-model="arr" value="C++" id="checkbox">
-	<label for="checkbox">C++</label>
+	<input name="radio" type="radio" v-model="choice" value="it's raining outside
+">
+	<label for="Английский">Английский</label>
 	<br>
-	<input type="checkbox" v-model="arr" value="Java" id="checkbox">
-	<label for="checkbox">Java</label>
-	<ul>
-		<li v-for="item in arr">{{ item }}</li>
-	</ul>
-	
+	<input name="radio" type="radio" v-model="choice" value="Draußen regnet es
+">
+	<label for="Неметский">Неметский</label>
+
+	<p v-if="choice" >{{ choice }}</p>
+	<p v-else>на улице идет дождь</p>
+	<p></p>
 
 </template>
 
