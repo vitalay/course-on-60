@@ -4,24 +4,27 @@ export default {
 	data() {
 		return {
 			text: '',
-			arr: []
+			arr: [],
+		
 		}
 	},
 
 	methods: {
 		split() {
-			this.arr = this.text.split(' ')
+			this.arr = this.text.split(' ');
 		}
 	}
 }
 </script>
 
 <template>
-<input v-model="text">
-<button @click="split">click</button>
-	<p v-for="item in arr">{{ item }}</p>
-
-	</template>
+	<textarea v-model="text"></textarea>
+	<button @click="split">Clear</button>
+	<ul>
+		<li v-for="word in arr">{{ word }}</li>
+	</ul>
+	
+</template>
 
 
 	<style scoped>
