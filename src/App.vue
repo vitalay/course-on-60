@@ -3,23 +3,28 @@ export default {
 
 	data() {
 		return {
-		  message: ''
+			num1: '',
+			num2: '',
+			res: ''
 		}
 	},
 
 	methods: {
-
+		calc: function () {
+			this.res = +this.num1 + +this.num2;
+		}
 	}
 }
 </script>
 
 <template>
+	<p>{{ res }}</p>
+	<input v-model="num1">
+	<input v-model="num2">
+	<button @click="calc">work</button>
+	</template>
 
-<input type="number" v-model="message" placeholder="введите число">
-<p>{{ message ** 2 }}</p>
-</template>
 
+	<style scoped>
 
-<style scoped>
-
-</style>
+	</style>
