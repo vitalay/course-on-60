@@ -3,7 +3,7 @@ export default {
 
 	data() {
 		return {
-			choice: '',
+			selected: 'Тюмень',
 
 		}
 	},
@@ -15,21 +15,13 @@ export default {
 </script>
 
 <template>
-	<p> Какой язык для вас родной</p>
-	<input name="radio" type="radio" v-model="choice" value="на улице идет дождь">
-	<label for="Русский">Русский</label>
-	<br>
-	<input name="radio" type="radio" v-model="choice" value="it's raining outside
-">
-	<label for="Английский">Английский</label>
-	<br>
-	<input name="radio" type="radio" v-model="choice" value="Draußen regnet es
-">
-	<label for="Неметский">Неметский</label>
+	<select v-model="selected">
+		<option>Тюмень</option>
+		<option>Москва</option>
+		<option>Санкт-Петербург</option>
+	</select>
 
-	<p v-if="choice" >{{ choice }}</p>
-	<p v-else>на улице идет дождь</p>
-	<p></p>
+	<p>{{ selected }}</p>
 
 </template>
 
