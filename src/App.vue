@@ -5,23 +5,25 @@ export default {
 		return {
 			num1: '',
 			num2: '',
-			res: ''
+			temp: ''
 		}
 	},
 
 	methods: {
-		calc: function () {
-			this.res = +this.num1 + +this.num2;
+		change: function () {
+			this.temp = this.num1;
+			this.num1 = this.num2;
+			this.num2 = this.temp;
 		}
 	}
 }
 </script>
 
 <template>
-	<p>{{ res }}</p>
+	<p>{{ temp }}</p>
 	<input v-model="num1">
 	<input v-model="num2">
-	<button @click="calc">work</button>
+	<button @click="change">work</button>
 	</template>
 
 
