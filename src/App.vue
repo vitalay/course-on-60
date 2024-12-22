@@ -3,7 +3,8 @@ export default {
 
 	data() {
 		return {
-		
+			isActive: false,
+			hasError: true,
 		}
 	},
 
@@ -14,14 +15,14 @@ export default {
 </script>
 
 <template>
-	<p :class="{active: true, valid: false}">text</p>
+	<p :class="{ active: isActive, error: hasError }">
+		text
+	</p>
 </template>
 
 
 <style scoped>
-
 * {
 	text-align: center;
 }
-
 </style>
