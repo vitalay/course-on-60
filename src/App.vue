@@ -19,9 +19,8 @@ export default {
 <template>
 <input v-model="text">
 <button @click="split">click</button>
-<ul>
-	<li v-for="item in arr">{{ item }}</li>
-</ul>
+	<p v-for="item in arr">{{ item }}</p>
+
 	</template>
 
 
