@@ -3,27 +3,25 @@ export default {
 
 	data() {
 		return {
-			num1: '',
-			num2: '',
-			temp: ''
+			text: '',
+			arr: []
 		}
 	},
 
 	methods: {
-		change: function () {
-			this.temp = this.num1;
-			this.num1 = this.num2;
-			this.num2 = this.temp;
+		split() {
+			this.arr = this.text.split(' ')
 		}
 	}
 }
 </script>
 
 <template>
-	<p>{{ temp }}</p>
-	<input v-model="num1">
-	<input v-model="num2">
-	<button @click="change">work</button>
+<input v-model="text">
+<button @click="split">click</button>
+<ul>
+	<li v-for="item in arr">{{ item }}</li>
+</ul>
 	</template>
 
 
