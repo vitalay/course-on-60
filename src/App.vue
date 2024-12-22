@@ -3,8 +3,8 @@ export default {
   name: 'App',
    data() {
     return {
-			// items: [1, -2, 3, -4, 5],  
-   arr: [1,2,3,4,5,6,7,8,9],
+			 items: [0, 1, -2, 3, -4, 5],  
+   
 
 
      }
@@ -16,9 +16,9 @@ export default {
 <template>
 
 <ul>
-	<template v-for="elem in arr">
-		<li v-if="elem % 2 == 0">
-			{{ elem }}
+	<template v-for="item in items">
+		<li v-if="item >= 0">
+			{{ item }}
 		</li>
 	</template>
 </ul>
