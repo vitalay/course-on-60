@@ -3,22 +3,24 @@ export default {
 
 	data() {
 		return {
-		isDisabled: false,
+			text: '',
+			result: ''
 		}
 	},
 
 	methods: {
-	  //   toggleDisabled() {
-		// 	this.isDisabled = !this.isDisabled;
-		// }
+		toEnter() {
+			this.result = this.text
+		}
 	}
 }
 </script>
 
 <template>
-	<input type="text" :disabled="isDisabled">
-  <!-- <button  @click="toggleDisabled">click</button> -->
-	<input type="checkbox" v-model="isDisabled">
+
+<input @keyup.enter="toEnter" v-model="text">
+
+{{ result }}
 
 </template>
 
@@ -26,3 +28,7 @@ export default {
 	<style scoped>
 
 	</style>
+
+
+<!-- Дан инпут. В этот инпут вводится текст. Сделайте так, чтобы по нажатию на клавишу Enter введенный текст появился в
+абзаце под инпутом. -->
