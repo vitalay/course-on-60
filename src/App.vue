@@ -3,7 +3,7 @@ export default {
 
 	data() {
 		return {
-		
+		  message: ''
 		}
 	},
 
@@ -14,15 +14,12 @@ export default {
 </script>
 
 <template>
-	<p :style="{fontWeight: 'bold', 'font-style': 'italic' }">
-		text
-	</p>
 
+<input type="number" v-model="message" placeholder="введите число">
+<p>{{ message ** 2 }}</p>
 </template>
 
 
 <style scoped>
-*{
-	text-align: center;
-}
+
 </style>
