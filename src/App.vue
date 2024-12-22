@@ -4,13 +4,13 @@ export default {
 	data() {
 		return {
 			text: '',
-			result: ''
+			
 		}
 	},
 
 	methods: {
-		toEnter() {
-			this.result = this.text
+		toShift() {
+			this.text = 'Hello'
 		}
 	}
 }
@@ -18,9 +18,8 @@ export default {
 
 <template>
 
-<input @keyup.enter="toEnter" v-model="text">
-
-{{ result }}
+	<a @click.prevent.shift.exact="toShift" href="#">Click</a>
+	{{ text }}
 
 </template>
 
@@ -29,6 +28,6 @@ export default {
 
 	</style>
 
-
-<!-- Дан инпут. В этот инпут вводится текст. Сделайте так, чтобы по нажатию на клавишу Enter введенный текст появился в
-абзаце под инпутом. -->
+<!-- Дана ссылка. Сделайте так, чтобы по клику на эту ссылку, если в этот момент зажата клавиша Ctrl, в абзац под ссылкой
+вывелся какой-нибудь текст.
+ -->
