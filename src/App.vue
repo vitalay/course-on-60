@@ -1,36 +1,51 @@
+<template>
+	<div>
+		<!-- Список пользователей -->
+		<ul>
+			<li v-for="user in users" :key="user.id">
+				Зарплата: {{ user.salary }} Лет {{ user.age }} Имя {{ user.name }}
+				<!-- Кнопка удаления для каждого элемента -->
+				<button @click="removeItem(user.id)">Удалить</button>
+			</li>
+		</ul>
+	</div>
+</template>
 
 <script>
 export default {
 	data() {
 		return {
-			newItem: '', // Исправлено название переменной на camelCase
-			items: ['a', 'b', 'c', 'd', 'e']
+			users: [
+				{
+					id: 1,
+					name: 'John',
+					salary: '100',
+					age: '20'
+				},
+				{
+					id: 2,
+					name: 'Bob',
+					salary: '200',
+					age: '30'
+				},
+				{
+					id: 3,
+					name: 'Alice',
+					salary: '300',
+					age: '40'
+				}
+			]
 		};
 	},
+
 	methods: {
-		removeItem(index) {
-			this.items.splice(index, 1);
-		},
-		add() {
-			if (this.newItem !== '') { // Проверка, чтобы избежать пустых значений
-				this.items.unshift(this.newItem); // Добавляем новый элемент в начало массива
-				this.newItem = ''; // Очищаем input поле
-			}
+		// Метод для удаления элемента по ID
+		removeItem(id) {
+			this.users = this.users.filter(user => user.id !== id);
 		}
 	}
 };
 </script>
-
-<template>
-	<input type="text" v-model="newItem">
-	<button @click="add">Добавить</button>
-	<ul>
-		<li v-for="(item, index) in items" :key="index">
-			{{ item }}
-			<button @click="removeItem(index)">Удалить</button>
-		</li>
-	</ul>
-</template>
 
 <style scoped>
 /* Основные стили */
