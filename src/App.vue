@@ -3,22 +3,17 @@ export default {
 
 	data() {
 		return {
-			text: '',
-
+			nevItem: '',
+			items: ['a', 'b', 'c', 'd', 'e']
+			
 		}
 	},
 
 	methods: {
-		toLeft() {
-			this.text = 'Left'
-		},
-
-		toRight() {
-			this.text = 'Right'
-		},
-
-		toMiddle() {
-			this.text = 'Middle'
+		add() {
+			this.items.unshift(this.nevItem ) //добавление элемента в начало массива
+			                                  //push - добавление элемента в конец массива
+			                                  //shift -  удаление элемента в начале массива
 		}
 	}
 }
@@ -26,19 +21,17 @@ export default {
 
 <template>
 
-	<a 
-	@click.prevent.left="toLeft"
-  @click.prevent.right="toRight" 
-	@click.prevent.middle="toMiddle"
-	href="#"
-	>Click
-</a>
-	{{ text }}
+<input type="text" placeholder="Введите текст" v-model="nevItem">
+	<button @click="add">click</button>
+	<ul>
+		<li v-for="(item, index) in items" :key="index">
+			{{ item }}
+		</li>
+	</ul>
 
 </template>
 
 
 <style scoped></style>
-<!-- 
-Дана ссылка. Сделайте так, чтобы по нажатию левой кнопки мыши на эту ссылку в абзац под ссылкой вывелся текст 'left', по
-нажатию правой кнопки мыши - текст 'right', а по нажатию средней кнопки - текст 'middle'. -->
+
+
