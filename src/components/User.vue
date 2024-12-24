@@ -2,7 +2,7 @@
  <br>
      {{ name }} 
      <br>
-     {{ salary }}
+     {{ surn }}
      <br>
     <button @click="$emit('remove', id)">Удалить</button>
  <br>
@@ -10,12 +10,12 @@
 
 <script>
 export default {
-  emits: ['remove'],
   props: {
+    id: Number,
     name: String,
-    salary: Number,
-    id: Number
+    surn: String,
   },
+  emits: ['remove'],
  
   data() {
     return {

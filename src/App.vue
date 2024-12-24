@@ -1,48 +1,42 @@
 <template>
-	<E
-		v-for="employee in employees"
-		:key="employee.id"
-		:name="employee.name"
-		:salary="employee.salary"
-		@remove="del"
-	 />
+	<User v-for="user in users" :id="user.id" :name="user.name" :surn="user.surn" @remove="remove" :key="user.id" />
 </template>
 
 <script>
-import E from './components/E.vue';
+import User from './components/User.vue';
 
 
 export default {
 	components: {
-		E
+		User
 	},
 	data() {
 		return {
-			employees: [
+			users: [
 				{
 					id: 1,
 					name: 'name1',
-					salary: 10000
+					surn: 'surn1'
 				},
 				{
 					id: 2,
 					name: 'name2',
-					salary: 5000
+					surn: 'surn2'
 				},
 				{
 					id: 3,
 					name: 'name3',
-					salary: 7000
+					surn: 'surn3'
 				},
-			],	
+			],
 	
 		}
 	},
 
 	methods: {
-		del(id) {
-			this.employees = this.employees.filter((employee) => {
-				return employee.id !== id;
+		remove(id) {
+			this.users = this.users.filter((user) => {
+				return user.id !== id;
 			})
 	
 		}
