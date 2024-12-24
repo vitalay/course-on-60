@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="handle">btn</button>
+    <button @click="$emit('show', 'Nick', 500)">btn</button>
  
   </div>
 </template>
@@ -16,9 +16,9 @@ export default {
   methods: {
 
 
-    handle() {
-      this.$emit('show' , 'Nick', 500)
-    },
+    // handle() {
+    //   this.$emit('show' , 'Nick', 500)
+    // },
  
   }
 
