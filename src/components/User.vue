@@ -17,7 +17,7 @@ export default {
 
 
     handle() {
-      this.$emit('show' , 'Nick')
+      this.$emit('show' , 'Nick', 500)
     },
  
   }

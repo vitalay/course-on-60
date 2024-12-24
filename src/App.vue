@@ -17,14 +17,9 @@ export default {
 	},
 
 	methods: {
-/*************  ✨ Codeium Command ⭐  *************/
-		/**
-		 * Shows alert box with given name
-		 * @param {string} name
-		 */
-/******  111cd865-5977-4bd7-bf9d-96d6e0561b30  *******/
-		func(name) {
-			alert(name)
+
+		func(name, salary) {
+			alert(name + '-' + salary + "$")
 		},
 	
 		
