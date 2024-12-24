@@ -1,5 +1,5 @@
 <template>
-	<User @show="func" @show1="func1"/>
+	<User @show="func" />
 </template>
 
 <script>
@@ -17,12 +17,16 @@ export default {
 	},
 
 	methods: {
-		func() {
-			alert('123')
+/*************  ✨ Codeium Command ⭐  *************/
+		/**
+		 * Shows alert box with given name
+		 * @param {string} name
+		 */
+/******  111cd865-5977-4bd7-bf9d-96d6e0561b30  *******/
+		func(name) {
+			alert(name)
 		},
-		func1() {
-			alert('222')
-		}
+	
 		
 	},
 
