@@ -14,7 +14,7 @@ export default {
 	data() {
 		return {
 			name: 'Vladimir',
-			salary: '100$',
+			salary: 100,
 			age: 22,
 		
 		}
