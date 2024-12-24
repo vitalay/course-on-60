@@ -1,6 +1,5 @@
 <template>
-	<Employe :arg="['machine', 'car', 'piople']" />
-	
+	<Employe :name="name" :salary="salary" :age="age" />
 
 
 
@@ -14,7 +13,9 @@ export default {
 	},
 	data() {
 		return {
-		
+			name: 'Vladimir',
+			salary: '100$',
+			age: 22,
 		
 		}
 	},

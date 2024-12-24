@@ -1,18 +1,19 @@
 <template>
-  <ul>
-    <li v-for="arg in items">{{ arg }}</li>
-    
-  </ul>
+  имя: {{ name }},
+  <br>
+  зарплата: {{ salary }},
+  <br>
+  года: {{ age }},
+  
 </template>
 
 <script>
 export default {
-  props: ['arg'],
+  props: ['name', 'salary', 'age'],
     data() {    
     
         return {
-          items: this.arg
-
+       
         
         }
     }
