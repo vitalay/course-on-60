@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: '/course-on-60/',
+	base: '/course-on-60',
 	plugins: [vue(), vueDevTools()],
 	resolve: {
 		alias: {
