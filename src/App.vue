@@ -7,15 +7,20 @@
 		:key="user.id"
 		 @change="change"
 		  />
+	<EmploeForme 
+	@add="add"
+	
+	/>
 </template>
 
 <script>
 import User from './components/User.vue';
-
+import EmploeForme from './components/EmploeForme.vue';
 
 export default {
 	components: {
-		User
+		User,
+		EmploeForme
 	},
 	data() {
 		return {
@@ -49,6 +54,13 @@ export default {
 					user.surn = surn;
 				}
 				return user;
+			});
+		},
+		add(name, surn) {
+			this.users.push({
+				id: this.users.length + 1,
+				name,
+				surn
 			});
 		}
 	},
